@@ -1,0 +1,485 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    background-color:  #1F1F1F;
+  }
+  
+  .sandwich-body{
+    background-color:  #44416b;
+  }
+  h1 {
+    font-size: 4.5vh;
+  }
+  
+  h2 {
+    font-size: 3.2vh;
+  }
+  
+  h3 {
+    font-size: 2.7vh;
+  }
+
+  /*-------------------------Header---------------------------*/
+header {
+  z-index: 10;
+  position:-webkit-sticky;
+  position: sticky;
+  top:0;
+  height: fit-content;
+  border-bottom: solid rgb(230, 79, 19);
+  opacity: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  background-color: whitesmoke;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.logo {
+  height: 3rem;
+  cursor: pointer;
+  padding-top:0.5rem;
+}
+
+nav {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+nav ul{
+    display: inline-flex;
+    align-items: baseline;
+    list-style: none;
+}
+
+nav ul li a{
+  margin-left: 5vw;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+  color: rgb(230, 79, 19);
+  transition: 0.3s;
+}
+
+/*---------------------------Footer-------------------------*/
+footer {
+  background-color: rgb(230, 79, 19);
+  padding-right: 10vw;
+  padding-left:10vw;
+  font-weight: 1000;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10vw;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+  color: white;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: black;
+}
+footer ul a:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+.linkedinicon {
+  font-size: 7vh;
+}
+
+.mail-icon {
+  height: 7vh;
+}
+
+.copyright {
+  grid-column: 2;
+  color: whitesmoke;
+}
+
+  .container {
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr 0.9fr 0.1fr;
+    gap:10px;
+    row-gap: 5vh;
+  }
+  
+  .header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    height: 6vh;
+    top:0;
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr 0.9fr 0.1fr;
+    background-color: whitesmoke;
+    padding: 10px;
+    box-shadow: 0px 1px 2px rgb(230, 79, 19);
+    opacity: 90%;
+    transition: top 0.2s ease-in-out;
+    z-index: 1;
+  }
+  
+  .logo {
+    padding-left: 10px;
+    grid-column: 2;
+    height: 6vh;
+  }
+  
+  .menuIcon {
+    text-align: right;
+    grid-column: 3;
+    font-size: 4.5vh;
+    padding-right: 10px;
+  }
+  
+  .menu {
+    text-align: right;
+    grid-column: 3;
+    padding-right: 10px;
+    position: relative;
+    top:-1.2vh;
+  } .menu a {
+    text-decoration: none;
+    color: black;
+  } .menu a:hover {
+    color: rgb(230, 79, 19);
+    transition: 0.3s;
+  }
+
+  .back {
+    font-size: 4vh;
+    grid-row: 8;
+    grid-column: 2;
+    justify-self: left;
+  } .back a {
+    color: white;
+    text-decoration: none;
+  } .back a:hover {
+    color: rgb(230, 79, 19);
+    transition: 0.3s;
+  }.backtext {
+    position: relative;
+    top:-12vh;
+    right:-10vh;
+  }
+  
+  .footer {
+    background-color: whitesmoke;
+    border-top: solid rgb(230, 79, 19);
+    grid-column: 1/6;
+    grid-row: 9;
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr 0.9fr 0.1fr;
+    grid-template-rows: repeat(3,0.3fr);
+  }
+  
+  .contact{
+    color: black;
+    grid-column: 2;
+  } .contact a {
+    text-decoration: none;
+    color: rgb(230, 79, 19);
+  } .contact a:hover {
+    text-decoration: underline;
+    color: black;
+    transition: 0.3s;
+  }
+  
+  .linkedin {
+    font-size: 4vh;
+    color: black;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 0.15fr auto;
+    grid-template-rows: auto;
+  } .linkedin a {
+    color: rgb(230,79,19);
+  } .linkedin a:hover {
+    color:black;
+  }
+  .linkedinicon {
+    grid-column: 1;
+    font-size: 7vh;
+  }
+  .visitlinkedin {
+    grid-column: 2;
+  }
+  
+  .copyright {
+    grid-column: 2;
+    color: black;
+    font-size: 2.5vh;
+}
+
+.aboutgreensandwich1 {
+  padding-top: 10px;
+  color: white;
+  grid-column: 2;
+  grid-row: 2;
+  text-align: justify;
+}
+
+.gsmoodboard {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: right;
+  width: 28vw;
+  border: solid rgb(230, 79, 19);
+  border-radius: 5px;
+}
+
+.aboutgreensandwich2 {
+  color: white;
+  grid-column: 3;
+  grid-row: 3;
+  text-align: justify;
+} .aboutgreensandwich2 a {
+  color: white;
+} .aboutgreensandwich2 a:hover {
+  color: rgb(230, 79, 19);
+  transition: 0.3s;
+}
+
+.gslogo {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: left;
+  width: 15vw;
+  border: solid rgb(230, 79, 19);
+  border-radius: 5px;
+}
+
+.aboutgreensandwich3 {
+  color: white;
+  grid-column: 2;
+  grid-row: 4;
+  text-align: justify;
+}
+
+.gspicture {
+  grid-column: 3;
+  grid-row: 4;
+  justify-self: right;
+  width: 40vw;
+  border: solid rgb(230, 79, 19);
+  border-radius: 5px;
+}
+
+.gspicture2 {
+  grid-column: 1/5;
+  grid-row: 5;
+  justify-self: center;
+  width: 87vw;
+  border-radius: 5px;
+}
+
+.biomasspicture1 {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: right;
+  width: 30vw;
+  border: solid rgb(230, 79, 19);
+  border-radius: 5px;
+  position:relative; top: 10vh;
+}
+
+.biomasspicture2 {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: left;
+  width: 30vw;
+  border: solid rgb(230, 79, 19);
+  border-radius: 5px;
+}
+
+.forestpicture {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: right;
+  width: 25vw;
+  border: solid rgb(230, 79, 19);
+  border-radius: 5px;
+}
+
+.articlelink {
+  grid-column: 1/5;
+  grid-row: 3;
+  justify-self: center;
+  font-size: 5vh;
+} .articlelink a {
+  color: white;
+  text-decoration: none;
+} .articlelink a:hover {
+  text-decoration: underline;
+  color: rgb(230,79,19);
+  transition: 0.3s;
+}
+
+.vbcontainer {
+  display: grid;
+  grid-template-columns: 0.1fr 0.9fr 0.9fr 0.1fr;
+  gap:10px;
+  row-gap: 5vh;
+} 
+.vb-body {
+  background-color: #1F1F1F;
+}
+.vbost-pic2 {
+  grid-column: 3;
+  grid-row: 2;
+  width: 40vw;
+  justify-self: right;
+  border-radius: 5px;
+}
+.vbost-pic3 {
+  grid-column: 2;
+  grid-row: 3;
+  width: 35vw;
+  justify-self: left;
+  border-radius: 5px;
+}
+.vbost-pic4 {
+  grid-column: 3;
+  grid-row: 4;
+  width: 35vw;
+  justify-self: right;
+  border-radius: 5px;
+}
+.vbost-pic5 {
+  grid-column: 2;
+  grid-row: 5;
+  width: 35vw;
+  justify-self: left;
+  border-radius: 5px;
+}
+.vbost-pic6 {
+  grid-column: 2;
+  grid-row: 7;
+  width: 35vw;
+  justify-self: right;
+  border-radius: 5px;
+}
+
+.vbost-pic7 {
+  grid-column: 3;
+  grid-row: 7;
+  width: 31vw;
+  justify-self: left;
+  border-radius: 5px;
+}
+.aboutvb4 {
+  color: white;
+  grid-column: 3;
+  grid-row: 5;
+  text-align: justify;
+}
+
+.aboutvb5 {
+  color: white;
+  grid-column: 2/4;
+  grid-row: 6;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .aboutgreensandwich1, .aboutgreensandwich2, .aboutgreensandwich3, .aboutvb4, .aboutvb5 {
+        grid-column: 2/4;
+        text-align:left;
+    }
+    .aboutgreensandwich1 {
+        grid-row: 2;
+    }
+    .aboutgreensandwich2 {
+        grid-row: 4;
+    }
+    .aboutgreensandwich3 {
+        grid-row: 6;
+    }
+    .aboutvb4 {
+        grid-row: 8;
+    }
+    .aboutvb5 {
+        grid-row: 10;
+    }
+    
+    .gsmoodboard, .vbost-pic2,.biomasspicture1, .forestpicture  {
+        grid-row:3;
+        grid-column: 2/4;
+        justify-self:center;
+        width: 30vmax;
+    }
+    .biomasspicture1{
+        display:none;
+    }
+    .gslogo, .vbost-pic3, .biomasspicture2 {
+        grid-row:5;
+        grid-column: 2/4;
+        justify-self:center;
+        width: 30vmax;
+    }
+    .gspicture, .vbost-pic4 {
+        grid-row:7;
+        grid-column: 2/4;
+        justify-self:center;
+        width: 30vmax;
+        border:non;
+    }
+    .gspicture {
+        display:none;
+    }
+    .gspicture2 {
+        width: 40vmax;
+         grid-row:9;
+        grid-column: 2/4;
+        justify-self:center;
+    }
+    .vbost-pic5 {
+        grid-row:9;
+        grid-column: 2/4;
+        justify-self:center;
+        width: 30vmax;
+    }
+    .vbost-pic6 {
+        grid-row:11;
+        grid-column: 2;
+        justify-self:left;
+        width: 20vmax;
+    }
+    .vbost-pic7 {
+        grid-row:11;
+        grid-column: 3;
+        justify-self:right;
+        width: 20vmax;
+    }
+    .back {
+        grid-row:12;
+        grid-column:2/4;
+    }
+    .articlelink {
+        font-size:3vh;
+    }
+    .footer {
+        grid-row:13;
+    }
+   .contact, .linkedin, .mail, .copyright {
+       grid-column: 2/4
+       
+   }
+}
