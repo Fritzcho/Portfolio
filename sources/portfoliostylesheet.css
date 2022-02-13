@@ -1,17 +1,22 @@
+
+@font-face {
+  font-family: League Spartan;
+  src: url('LeagueSpartan-Bold.otf') format("opentype");
+}
+
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  background-color: rgb(230, 79, 19);
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  background: #1F1F1F;
+
+  display: none;
 }
 body::-webkit-scrollbar-thumb {
-  background: rgb(230, 79, 19);
+  background: #1f1f1f00;
   border-radius: 10px;
+  
 }
 body::-webkit-scrollbar-track {
   background: transparent;
@@ -27,53 +32,26 @@ body::-webkit-scrollbar-track {
 /*-------------------------Header---------------------------*/
 header {
   z-index: 10;
-  position:-webkit-sticky;
-  position: sticky;
+  position: fixed;
   top:0;
-  height: fit-content;
-  border-bottom: solid rgb(230, 79, 19);
-  opacity: 100%;
+  min-height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: left;
-  background-color: whitesmoke;
   padding-left: 10vw;
   padding-right: 10vw;
 }
 
 .logo {
-  height: 3rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  padding-top:0.5rem;
-}
-
-nav {
-  text-transform: uppercase;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 1000;
-}
-
-nav ul{
-    display: inline-flex;
-    align-items: baseline;
-    list-style: none;
-}
-
-nav ul li a{
-  margin-left: 5vw;
-    text-decoration: none;
-    color: black;
-}
-
-nav ul li a:hover {
-  color: rgb(230, 79, 19);
-  transition: 0.3s;
+  font-family: 'League Spartan', sans-serif;
+  transition: 0.5s;
 }
 
 /*---------------------------Footer-------------------------*/
 footer {
-  background-color: rgb(230, 79, 19);
+  background-color: #ff662a;
   padding-right: 10vw;
   padding-left:10vw;
   font-weight: 1000;
@@ -117,6 +95,78 @@ footer ul a:hover {
   color: whitesmoke;
 }
 
+/*---------------------Hero---------------------*/
+.hero {
+  height: 100vh;
+	animation:bg-change 10s infinite;
+  cursor: url('images/cursor.png'), auto;	
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+@keyframes bg-change {
+	0%,100% {
+		background-color: #f69000;
+	}
+  50% {
+    background-color: #53b1b1;
+  }
+}
+
+@keyframes tc-change {
+  0%,100% {
+    color: black;
+	}
+  50% {
+    color: black;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #1F1F1F; }
+}
+
+.hero.text, .hero.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation:tc-change 10s infinite;
+  margin: 20px;
+
+}
+
+.hero.text h1 {
+  animation: 
+  typing 2.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid #1F1F1F;
+}
+
+.hero.text h2 {
+  animation: 
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+  animation-delay: 4s;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid #1F1F1F;
+  width: fit-content;
+}
+
+
+.hero.image img {
+  max-height: 300px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+}
 /*-------------------------Welcome---------------------*/
 .welcomegrid {
   padding-left: 10vw;
@@ -126,8 +176,6 @@ footer ul a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/background.png");
-  background-size:cover;
   /*background-image: -webkit-linear-gradient(30deg, #1F1F1F 60%,whitesmoke 40%);*/
   background-repeat: no-repeat;
   overflow: hidden;
@@ -136,7 +184,7 @@ footer ul a:hover {
 .welcome {
   grid-column: 1;
   grid-row:2;
-  color: whitesmoke;
+  color: black;
   animation: 3s slide-right;
 }
 
@@ -177,7 +225,7 @@ footer ul a:hover {
   height: 60px;
   width: 60px;
   border-style: solid;
-  border-color: rgb(230, 79, 19);
+  border-color: #ff662a;
   border-width: 0px 9px 9px 0px;
   transform: rotate(45deg);
   margin-top: -40px;
@@ -202,21 +250,21 @@ footer ul a:hover {
   z-index: 1;
   text-align: center;
   grid-column: 1/3;
-  background-color: rgb(230, 79, 19);
+  background-color: #ff662a;
   color: whitesmoke;
 }
 
 .assignments {
   text-align: center;
   grid-column: 1/3;
-  background-color: rgb(230, 79, 19);
+  background-color: #ff662a;
   color: whitesmoke;
 }
 
 .finalinfo {
   text-align: center;
   grid-column: 1/3;
-  background-color: rgb(230, 79, 19);
+  background-color: #ff662a;
   border-top: solid whitesmoke;
   color: whitesmoke;
 }
@@ -236,7 +284,7 @@ footer ul a:hover {
   height: 11vw;
   overflow: hidden;
   justify-self: right;
-  border: solid rgb(230, 79, 19);
+  border: solid #ff662a;
   border-radius: 20px;
   transition: 0.3s ease-in-out;
 }
@@ -263,7 +311,7 @@ footer ul a:hover {
 } 
 
 .portfolio-item:hover > .item-description {
-    color:rgb(230, 79, 19);
+    color:#ff662a;
     transition: 0.5s ease-in-out;
 }
 
