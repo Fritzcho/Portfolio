@@ -137,6 +137,26 @@ footer {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
 }
 
+@media only screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero.image img {
+    max-height: auto;
+    max-width: 70vw;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+  }
+
+  .hero.image {
+    flex-direction: row;
+  }
+
+  .main-image {
+    max-width: 80vw;
+  }
+}
+
 /*-----------------------Projects-----------------------*/
 .project-items {
   color: white;
