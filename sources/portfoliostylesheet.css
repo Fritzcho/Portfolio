@@ -171,7 +171,7 @@ footer {
   cursor: pointer;
   max-width: 40vw;
   max-height: 50vh;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.164);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.288);
 }
 
 .project {
