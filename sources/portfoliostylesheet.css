@@ -169,8 +169,9 @@ footer {
 
 .main-image {
   cursor: pointer;
-  max-width: 40vw;
-  max-height: 50vh;
+  max-width: 30rem;
+  max-height: 25rem;
+  object-fit: cover;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.288);
 }
 
@@ -199,6 +200,12 @@ footer {
   max-width: 91vw;
   min-height: 75vh;
   overflow-x: scroll;
+}
+
+.project.active img {
+  max-width: 40rem;
+  max-height: 25rem;
+  object-fit: cover;
 }
 
 .p {
